@@ -1,0 +1,78 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<h2>What is the Hypertext Transfer Protocol?(HTTP)</h2>
+<p>HTTP means HyperText Transfer Protocol. HTTP is the underlying protocol used by the World Wide Web and this protocol defines how messages are formatted and transmitted, and what actions Web servers and browsers should take in response to various commands.
+For example, when you enter a URL in your browser, this actually sends an HTTP command to the Web server directing it to fetch and transmit the requested Web page. The other main standard that controls how the World Wide Web works is HTML, which covers how Web pages are formatted and displayed.</p>
+<h2>Why is HTTP called a stateless protocol?</h2>
+<p>HTTP is called a stateless protocol because each command is executed independently, without any knowledge of the commands that came before it. This is the main reason that it is difficult to implement Web sites that react intelligently to user input. This shortcoming of HTTP is being addressed in a number of new technologies, including ActiveX, Java, JavaScript and cookies.</p>
+<h2>Describe the three phases of establishing a session using client-server protocols such as HTTP</h2>
+<p>In client-server protocols, like HTTP, sessions consist of three phases:
+<ul>
+<li>The client establishes a TCP connection (or the appropriate connection if the transport layer is not TCP).</li>
+<li>The client sends its request, and waits for the answer.<li>
+<li>The server processes the request, sending back its answer, providing a status code and appropriate data.</li>
+</ul>
+As of HTTP/1.1, the connection is no longer closed after completing the third phase, and the client is now granted a further request: this means the second and third phases can now be performed any number of times.</p>
+<h2>Describe the parameters on a get and post request.</h2>
+<h3>The GET method</h3>
+<p>GET is used to request data from a specified resource.
+GET is one of the most common HTTP methods.
+Note that the query string (name/value pairs) is sent in the URL of a GET request:
+<ul>
+<li>GET requests can be cached</li>
+<li>GET requests remain in the browser history</li>
+<li>GET requests can be bookmarked</li>
+<li>GET requests should never be used when dealing with sensitive data</li>
+<li>GET requests have length restrictions</li>
+<li>GET requests is only used to request data (not modify)</li>
+</ul>
+/test/demo_form.php?name1=value1&name2=value2</p>
+<h3>The POST Method</h3>
+POST is used to send data to a server to create/update a resource.
+The data sent to the server with POST is stored in the request body of the HTTP request:
+POST /test/demo_form.php HTTP/1.1
+Host: w3schools.com
+name1=value1&name2=value2
+POST is one of the most common HTTP methods.
+Some other notes on POST requests:
+<ul>
+<li>POST requests are never cached</li>
+<li>POST requests do not remain in the browser history</li>
+<li>POST requests cannot be bookmarked</li>
+<li>POST requests have no restrictions on data length</li>
+</ul>
+<h2>What are the HTTP response status code and What do the HTTP status codes, 200, and 404 indicate?</h2>
+<ul>
+<li>1xx: Informational</li>
+<li>2xx: Success</li>
+<li>3xx: Redirection</li>
+<li>4xx: Client Error</li>
+<li>5xx:  Server Error</li>
+</ul>
+<p>200 represents-It indicates that the REST API successfully carried out whatever action the client requested, and that no more specific code in the 2xx series is appropriate.</p>
+<p>404 represents-The 404 error status code indicates that the REST API can’t map the client’s URI to a resource but may be available in the future. Subsequent requests by the client are permissible.</p>
+<h2>What are HTTP cookies? Give an example.</h2>
+<p>An HTTP cookie (also called web cookie, Internet cookie, browser cookie, or simply cookie) is a small piece of data sent from a website and stored on the user's computer by the user's web browser while the user is browsing. Cookies were designed to be a reliable mechanism for websites to remember stateful information (such as items added in the shopping cart in an online store) or to record the user's browsing activity (including clicking particular buttons, logging in, or recording which pages were visited in the past). They can also be used to remember arbitrary pieces of information that the user previously entered into form fields such as names, addresses, passwords, and credit card numbers.</p>
+<h4>Example</h4>
+<p>
+HTTP/1.0 200 OK
+Content-type: text/html
+Set-Cookie: theme=light
+Set-Cookie: sessionToken=abc123; Expires=Wed, 09 Jun 2021 10:18:14 GMT
+...</p>
+<h2>Why are cookies a security issue?</h2>
+<p>Now the problem is that the cookie doesn't contain any path or domain name. ... The web server cannot validate which is the legitimate cookie, because the cookie attributes, such as domain path secure and HttpOnly attributes, are not sent to it.</p>
+<h2>Describe session hijacking and XSS</h2>
+<h3>Session Hijacking</h3>
+<p>TCP Session Hijacking is one of the earlier methods of session hijacking. A TCP session hijacking generally occurs between a server and a client machine. Unlike the SQL injection method of hacking, in this method no malicious codes are entered into the network interface.</p>
+<h3>XSS</h3>
+<p>Cross-site scripting (XSS) is a type of computer security vulnerability typically found in web applications. XSS enables attackers to inject client-side scripts into web pages viewed by other users. A cross-site scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy.</p>
+<h2>Describe Cross-site request forgery(CSRF)</h2>
+<p>Cross-site request forgery. Cross-site request forgery, also known as one-click attack or session riding and abbreviated as CSRF (sometimes pronounced sea-surf) or XSRF, is a type of malicious exploit of a website where unauthorized commands are transmitted from a user that the web application trusts.</p>
+<h2>What are Cross-site HTTP requests (CORS) and what requests use CORS?</h2>
+<p>Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served. A web page may freely embed cross-origin images, stylesheets, scripts, iframes, and videos.</p>
+</body>
+</html>
